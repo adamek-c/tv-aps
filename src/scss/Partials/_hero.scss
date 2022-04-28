@@ -1,0 +1,108 @@
+$color: #fcfcfc;
+$font-title: 1.5rem;
+$font-des: 1rem;
+
+.title {
+	text-align: center;
+	font-size: clamp(1.25rem, -0.3409rem + 7.9545vw, 5.625rem);
+	color: $color;
+	margin: 3rem;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.input {
+	padding: 1rem;
+	border: none;
+	width: 80%;
+	font-size: 2rem;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.movie {
+	margin-top: 8rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 15rem;
+	column-gap: 3rem;
+	padding: 0 1rem;
+
+	width: 100%;
+	color: #fcfcfc;
+
+	@media screen and (min-width: 500px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (min-width: 900px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (min-width: 1100px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media screen and (min-width: 1400px) {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	&__template {
+		cursor: pointer;
+		transition: all 0.4s ease-in-out;
+
+		&:hover {
+			transform: scale(1);
+			@media screen and (min-width: 1024px) {
+				transform: scale(1.05);
+				opacity: 0.5;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&:hover &__template {
+		opacity: 0.4;
+	}
+
+	&:hover &__template:hover {
+		opacity: 1;
+	}
+
+	&__desc {
+		margin: 1rem 0;
+		font-size: $font-des;
+	}
+
+	&__title {
+		font-size: $font-title;
+	}
+
+	&__rating {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		visibility: hidden;
+
+		> p {
+			font-size: $font-des;
+		}
+	}
+
+	&__template:hover &__rating {
+		visibility: visible;
+	}
+}
