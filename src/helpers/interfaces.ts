@@ -1,6 +1,6 @@
 export interface Movies {
 	backdrop_path?: string;
-	first_air_date: string;
+	release_date: string;
 	genre_ids?: {
 		0: number;
 	};
@@ -10,7 +10,7 @@ export interface Movies {
 		0: string;
 	};
 	original_language?: string;
-	original_name: string;
+	original_title: string;
 	overview: string;
 	popularity?: number;
 	poster_path: string;

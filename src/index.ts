@@ -1,19 +1,20 @@
 import { fetchTopRatedMovies } from "./types/axios";
-
-const box: HTMLElement = document.querySelector(".movie");
-
 import { Movies } from "./helpers/interfaces";
 
-// create layout
+const box = document.querySelector<HTMLElement>(".movie");
+const input = document.querySelector<HTMLInputElement>(".input");
+const title = document.querySelector<Element>(".title span");
+
+// render movies and render filtred movies
 export const topRatedMovies = (results: Movies[]) => {
 	const url: string = "https://image.tmdb.org/t/p/w500/";
-	const movies = results
+	const movie = results
 		.map((result) => {
 			const {
 				poster_path: img,
-				first_air_date: release,
+				release_date: release,
 				id,
-				original_name: name,
+				original_title: name,
 				overview,
 				vote_count: count,
 			} = result;
@@ -32,11 +33,41 @@ export const topRatedMovies = (results: Movies[]) => {
 		</div>`;
 		})
 		.join("");
-	box.innerHTML = movies;
+	box.innerHTML = movie;
+};
+
+// filtr movies in search input
+export const handleFilterMovies = (movies: Movies[]) => {
+	input.addEventListener("keyup", () => {
+		const value =
+			input.value.toLocaleLowerCase() || input.value.toLocaleLowerCase();
+		if (input.value !== "") {
+			const filterMovies = movies.filter((movie) =>
+				movie.original_title.toLocaleLowerCase().startsWith(value)
+			);
+			return topRatedMovies(filterMovies);
+		}
+		return topRatedMovies(movies);
+	});
+};
+
+const handlePasstKeyWord = () => {
+	const keyWords = document.querySelectorAll<HTMLElement>(".box__list li");
+
+	keyWords.forEach((key) => {
+		const newKey = key.getAttribute("data-key");
+
+		key.addEventListener("click", () => {
+			fetchTopRatedMovies(newKey);
+			title.innerHTML = key.innerHTML;
+		});
+	});
 };
 
 const init = () => {
+	title.innerHTML = "Top Rated";
 	fetchTopRatedMovies();
+	handlePasstKeyWord();
 };
 
 init();
