@@ -53,7 +53,6 @@ export const handleFilterMovies = (movies: Movies[]) => {
 
 const handlePasstKeyWord = () => {
 	const keyWords = document.querySelectorAll<HTMLElement>(".box__list li");
-
 	keyWords.forEach((key) => {
 		const newKey = key.getAttribute("data-key");
 
