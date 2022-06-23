@@ -1,6 +1,6 @@
+import axios from "axios";
 import { topRatedMovies, handleFilterMovies } from "..";
-import { Data } from "../helpers/interfaces";
-const axios = require("axios").default;
+import { Data } from "../Interfaces/interfaces";
 
 const urlBasic: string = "https://api.themoviedb.org/3/movie/";
 const key: string = "fb1f780207fe7045344b3c6307457ba4";

@@ -1,5 +1,5 @@
-import { fetchTopRatedMovies } from "./types/axios";
-import { Movies } from "./helpers/interfaces";
+import { fetchTopRatedMovies } from "./fetch/axios";
+import { Movies } from "./Interfaces/interfaces";
 
 const box = document.querySelector<HTMLElement>(".movie");
 const input = document.querySelector<HTMLInputElement>(".input");
