@@ -1,0 +1,42 @@
+header {
+	position: relative;
+}
+
+.background {
+	background-image: url("../asset/stranger-things-desktop.png");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+
+	max-width: 100%;
+	height: 704px;
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-text);
+	font-weight: $fw-bold;
+	font-size: $fs-h4;
+	text-transform: uppercase;
+}
+
+.mode {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&__text {
+		color: var(--color-text);
+		margin-right: $margin;
+		font-weight: $fw-regular;
+		font-size: $fs-small;
+		text-transform: capitalize;
+	}
+}

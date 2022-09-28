@@ -1,1 +1,113 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+html[data-theme="light"] {
+  --color-text: #f9f5ff;
+  --color-text-btn: #751fff;
+  --color-bg-btn: #751fff;
+  --color-background: #fcfcfc;
+  --color-background-card: whitesmoke;
+}
+
+html[data-theme="dark"] {
+  --color-text: #f9f5ff;
+  --color-text-btn: #ffe91f;
+  --color-bg-btn: #ffe91f;
+  --color-background: #1a2128;
+  --color-background-card: #232c34;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  background-color: var(--color-background);
+}
+
+header {
+  position: relative;
+}
+
+.background {
+  background-image: url("../asset/stranger-things-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  max-width: 100%;
+  height: 704px;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--color-text);
+  font-weight: 800;
+  font-size: 1.80187rem;
+  text-transform: uppercase;
+}
+
+.mode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.mode__text {
+  color: var(--color-text);
+  margin-right: 0.5rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.hero {
+  padding-inline: 0.5rem;
+  margin-block: calc(6rem);
+  text-align: center;
+}
+
+.hero > input[name="search"] {
+  border: 1px solid #dadee2;
+  padding: calc(0.75rem) 0 calc(0.75rem) calc(0.875rem);
+  border-radius: 0.625rem;
+}
+/*# sourceMappingURL=main.css.map */

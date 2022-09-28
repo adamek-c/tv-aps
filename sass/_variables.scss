@@ -13,10 +13,14 @@ $bg-color-light-dark: hsl(208, 20%, 17%);
 $black: hsl(270, 7%, 11%);
 $white: hsl(262, 100%, 98%);
 
-// Font size
-$fs-h1: 4.11rem;
-$fs-basic: 1rem;
-$fs-small: 0.875rem;
+$bg-color-border: hsl(207, 13%, 87%);
+
+// Font size ratio 1.125
+$fs-h1: 4.11rem; //64px
+$fs-h2: 3.2475rem; //51.96px
+$fs-h4: 1.801875rem; //28.83
+$fs-basic: 1rem; //16px
+$fs-small: 0.875rem; //14px
 
 // background shadow
 $bg-shadow-light-grey: 0px 25px 40px -10px hsla(209, 27%, 15%, 0.08);
@@ -31,3 +35,7 @@ $font-family: "Inter", sans-serif;
 // margin padding basic
 $margin: 0.5rem;
 $padding: 0.5rem;
+
+// font-weight
+$fw-bold: 800;
+$fw-regular: 400;

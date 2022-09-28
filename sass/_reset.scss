@@ -1,0 +1,51 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+html[data-theme="light"] {
+	--color-text: #{$white};
+	--color-text-btn: #{$color-purple};
+	--color-bg-btn: #{$color-purple-8};
+
+	--color-background: #{$bg-color-light};
+	--color-background-card: #{$bg-color-light-grey};
+}
+
+html[data-theme="dark"] {
+	--color-text: #{$white};
+	--color-text-btn: #{$color-yellow};
+	--color-bg-btn: #{$color-yellow-8};
+
+	--color-background: #{$bg-color-dark};
+	--color-background-card: #{$bg-color-light-dark};
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+body {
+	font-family: $font-family;
+	line-height: 1.5;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	background-color: var(--color-background);
+}

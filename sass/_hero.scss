@@ -1,0 +1,12 @@
+.hero {
+	padding-inline: $padding;
+	margin-block: calc(#{$margin * 12});
+	text-align: center;
+
+	> input[name="search"] {
+		border: 1px solid $bg-color-border;
+		padding: calc(#{$padding + 0.25rem}) 0 calc(#{$padding + 0.25rem})
+			calc(#{$padding + 0.375rem});
+		border-radius: 0.625rem;
+	}
+}
