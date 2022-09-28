@@ -1,0 +1,33 @@
+// Corlors
+$color-purple: hsl(263, 100%, 56%);
+$color-purple-8: hsla(263, 100%, 56%, 8%);
+$color-yellow: hsl(54, 100%, 56%);
+$color-yellow-8: hsla(54, 100%, 56%, 8%);
+
+$bg-color-light: hsl(0, 0%, 99%);
+$bg-color-dark: hsl(210, 21%, 13%);
+
+$bg-color-light-grey: hsl(0, 0%, 96%);
+$bg-color-light-dark: hsl(208, 20%, 17%);
+
+$black: hsl(270, 7%, 11%);
+$white: hsl(262, 100%, 98%);
+
+// Font size
+$fs-h1: 4.11rem;
+$fs-basic: 1rem;
+$fs-small: 0.875rem;
+
+// background shadow
+$bg-shadow-light-grey: 0px 25px 40px -10px hsla(209, 27%, 15%, 0.08);
+$bg-shadow-light-purple: 0px 25px 40px -10px hsla(263, 100%, 56%, 0.08);
+
+$bg-shadow-dark-black: 0px 25px 40px -10px hsla(0, 0%, 0%, 0.4);
+$bg-shadow-dark-yellow: 0px 25px 40px -10px hsla(54, 100%, 56%, 0.08);
+
+// Font familly
+$font-family: "Inter", sans-serif;
+
+// margin padding basic
+$margin: 0.5rem;
+$padding: 0.5rem;
