@@ -6,7 +6,6 @@ header {
 	background-image: url("../asset/stranger-things-desktop.png");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-attachment: fixed;
 
 	max-width: 100%;
 	height: 704px;
@@ -21,6 +20,21 @@ h1 {
 	font-weight: $fw-bold;
 	font-size: $fs-h4;
 	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+
+	@include mq(small) {
+		font-size: $fs-h3;
+	}
+	@include mq(medium) {
+		font-size: calc(#{$fs-h3 * 1.125});
+	}
+	@include mq(large) {
+		font-size: $fs-h2;
+	}
+	@include mq(exlarge) {
+		font-size: $fs-h1;
+	}
 }
 
 .mode {
@@ -32,11 +46,38 @@ h1 {
 	justify-content: center;
 	cursor: pointer;
 
+	&:hover * {
+		color: var(--color-text-btn);
+		stroke: var(--color-text-btn);
+	}
+
+	@include mq(small) {
+		top: 1.2rem;
+		right: 1.2rem;
+	}
+	@include mq(medium) {
+		top: 1.6rem;
+		right: 1.6rem;
+	}
+	@include mq(large) {
+		top: 1.8rem;
+		right: 1.8rem;
+	}
+	@include mq(exlarge) {
+		top: 2rem;
+		right: 2rem;
+	}
+
 	&__text {
 		color: $white;
 		margin-right: $margin;
 		font-weight: $fw-regular;
 		font-size: $fs-small;
 		text-transform: capitalize;
+		transition: all 0.5s ease;
+	}
+
+	&__switch svg path {
+		transition: all 0.5s ease;
 	}
 }

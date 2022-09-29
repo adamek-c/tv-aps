@@ -1,12 +1,12 @@
 .grid {
 	width: 100%;
-	margin-bottom: calc(#{$padding * 8});
+
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(auto, 15.9375rem));
 	grid-auto-rows: 21.625rem;
 	justify-content: center;
 
-	gap: calc(#{$padding * 4});
+	gap: calc(#{$padding * 8});
 }
 
 .card {
@@ -14,9 +14,13 @@
 	height: 100%;
 	overflow: hidden;
 	box-shadow: var(--box-shadow-light);
-	background-color: #fff;
+	background-color: $black;
 	position: relative;
 	cursor: pointer;
+
+	&:hover img {
+		opacity: 0.5;
+	}
 
 	&:hover &__info {
 		bottom: 0%;
@@ -28,7 +32,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 7.5rem;
+		min-height: 7.5rem;
 		background-color: var(--color-background-card);
 		border-top-left-radius: 1.25rem;
 		border-top-right-radius: 1.25rem;
@@ -50,6 +54,14 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			&__item * svg path {
+				stroke: var(--color-text);
+			}
 		}
+	}
+
+	> img {
+		transition: all 0.5s ease;
 	}
 }

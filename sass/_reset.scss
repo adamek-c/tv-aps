@@ -8,6 +8,8 @@ html[data-theme="light"] {
 	--color-text-btn: #{$color-purple};
 	--color-bg-btn: #{$color-purple-8};
 
+	--bg-container: #{$bg-light-container};
+
 	--color-background: #{$bg-color-light};
 	--color-background-card: #{$bg-color-light-grey};
 	--box-shadow-light: #{$bg-shadow-light-grey};
@@ -17,6 +19,8 @@ html[data-theme="dark"] {
 	--color-text: #{$white};
 	--color-text-btn: #{$color-yellow};
 	--color-bg-btn: #{$color-yellow-8};
+
+	--bg-container: #{$bg-dark-container};
 
 	--color-background: #{$bg-color-dark};
 	--color-background-card: #{$bg-color-light-dark};
@@ -38,6 +42,7 @@ html[data-theme="dark"] {
 body {
 	font-family: $font-family;
 	line-height: 1.5;
+	background-color: var(--color-background);
 }
 
 img {
@@ -49,5 +54,16 @@ img {
 .container {
 	max-width: 1440px;
 	margin-inline: auto;
-	background-color: var(--color-background);
+	background-color: var(--bg-container);
+	padding-bottom: calc(#{$padding * 8});
+}
+
+.space {
+	padding-inline: 1rem;
+	@include mq(large) {
+		padding-inline: 4rem;
+	}
+	@include mq(xxllarge) {
+		padding-inline: 7.125rem;
+	}
 }
