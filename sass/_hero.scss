@@ -1,6 +1,6 @@
 .hero {
 	padding-inline: $padding;
-	margin-block: calc(#{$margin * 12});
+	margin-block: calc(#{$margin * 8});
 	text-align: center;
 
 	> input[name="search"] {

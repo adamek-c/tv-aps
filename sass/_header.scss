@@ -17,7 +17,7 @@ h1 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: var(--color-text);
+	color: $white;
 	font-weight: $fw-bold;
 	font-size: $fs-h4;
 	text-transform: uppercase;
@@ -33,7 +33,7 @@ h1 {
 	cursor: pointer;
 
 	&__text {
-		color: var(--color-text);
+		color: $white;
 		margin-right: $margin;
 		font-weight: $fw-regular;
 		font-size: $fs-small;
