@@ -1,8 +1,8 @@
 // Corlors
 $color-purple: hsl(263, 100%, 56%);
-$color-purple-8: hsla(263, 100%, 56%, 8%);
+$color-purple-8: #751fff14;
 $color-yellow: hsl(54, 100%, 56%);
-$color-yellow-8: hsla(54, 100%, 56%, 8%);
+$color-yellow-8: #ffe91f14;
 
 $bg-color-light: hsl(0, 0%, 99%);
 $bg-color-dark: hsl(210, 21%, 13%);
@@ -23,11 +23,11 @@ $fs-basic: 1rem; //16px
 $fs-small: 0.875rem; //14px
 
 // background shadow
-$bg-shadow-light-grey: 0px 25px 40px -10px hsla(209, 27%, 15%, 0.08);
-$bg-shadow-light-purple: 0px 25px 40px -10px hsla(263, 100%, 56%, 0.08);
+$bg-shadow-light-grey: 0px 25px 40px -10px rgba(28, 39, 49, 0.08);
+$bg-shadow-light-purple: 0px 25px 40px -10px rgba(117, 31, 255, 0.08);
 
-$bg-shadow-dark-black: 0px 25px 40px -10px hsla(0, 0%, 0%, 0.4);
-$bg-shadow-dark-yellow: 0px 25px 40px -10px hsla(54, 100%, 56%, 0.08);
+$bg-shadow-dark-black: 0px 25px 40px -10px rgba(0, 0, 0, 0.4);
+$bg-shadow-dark-yellow: 0px 25px 40px -10px rgba(255, 233, 31, 0.08);
 
 // Font familly
 $font-family: "Inter", sans-serif;
@@ -39,3 +39,6 @@ $padding: 0.5rem;
 // font-weight
 $fw-bold: 800;
 $fw-regular: 400;
+
+// border radius
+$border-full: 6.25rem; //100px

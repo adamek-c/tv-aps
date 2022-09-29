@@ -7,17 +7,19 @@ html {
 html[data-theme="light"] {
   --color-text: #f9f5ff;
   --color-text-btn: #751fff;
-  --color-bg-btn: #751fff;
+  --color-bg-btn: #751fff14;
   --color-background: #fcfcfc;
   --color-background-card: whitesmoke;
+  --box-shadow-light: 0px 25px 40px -10px rgba(28, 39, 49, 0.08);
 }
 
 html[data-theme="dark"] {
   --color-text: #f9f5ff;
   --color-text-btn: #ffe91f;
-  --color-bg-btn: #ffe91f;
+  --color-bg-btn: #ffe91f14;
   --color-background: #1a2128;
   --color-background-card: #232c34;
+  --box-shadow-dark: 0px 25px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -109,5 +111,101 @@ h1 {
   border: 1px solid #dadee2;
   padding: calc(0.75rem) 0 calc(0.75rem) calc(0.875rem);
   border-radius: 0.625rem;
+}
+
+.hero__select {
+  margin-top: calc(2rem);
+  width: 100%;
+  min-width: 10ch;
+  max-width: 24ch;
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.1;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "select";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-inline: auto;
+  background-color: var(--color-bg-btn);
+  border-radius: 6.25rem;
+  position: relative;
+}
+
+.hero__select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--color-text-btn);
+  -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+          clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.hero__select > select {
+  padding: calc(0.75rem) 0 calc(0.75rem) calc(0.875rem);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text-btn);
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 0.0625rem solid var(--color-text-btn);
+  border-radius: inherit;
+}
+
+select,
+.hero__select::after {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: select;
+}
+
+.grid {
+  width: 100%;
+  margin-top: calc(2rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, 15.9375rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(auto, 15.9375rem));
+  grid-auto-rows: 21.625rem;
+  margin-inline: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: calc(2rem);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: var(--box-shadow-light);
+          box-shadow: var(--box-shadow-light);
+  border-radius: 1.25rem;
+  background-color: #fff;
+}
+
+.card__info {
+  width: 100%;
+  height: 7.5rem;
+  background-color: red;
+  border-radius: 1.25rem;
+  padding: calc(1.5rem);
 }
 /*# sourceMappingURL=main.css.map */

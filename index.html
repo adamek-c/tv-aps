@@ -36,12 +36,29 @@
 			</div>
 		</header>
 
-		<main>
+		<section>
 			<div class="container hero">
 				<input type="text" name="search" placeholder="Search" />
+				<div class="hero__select">
+					<select id="cars" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+					</select>
+					<span class="focus"></span>
+				</div>
 			</div>
-		</main>
+		</section>
+		<section>
+			<div class="grid">
+				<div class="card">
+					<div class="card__info">1</div>
+				</div>
+				<div class="card__info">2</div>
+			</div>
+		</section>
 
-		<script src="./main.js"></script>
+		<script type="module" src="./main.js"></script>
 	</body>
 </html>

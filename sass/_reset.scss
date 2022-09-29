@@ -10,6 +10,7 @@ html[data-theme="light"] {
 
 	--color-background: #{$bg-color-light};
 	--color-background-card: #{$bg-color-light-grey};
+	--box-shadow-light: #{$bg-shadow-light-grey};
 }
 
 html[data-theme="dark"] {
@@ -19,6 +20,7 @@ html[data-theme="dark"] {
 
 	--color-background: #{$bg-color-dark};
 	--color-background-card: #{$bg-color-light-dark};
+	--box-shadow-dark: #{$bg-shadow-dark-black};
 }
 
 *,
