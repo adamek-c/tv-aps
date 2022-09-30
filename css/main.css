@@ -336,15 +336,15 @@ select,
 }
 
 .grid {
-  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(auto, 15.9375rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(auto, 15.9375rem));
+  -ms-grid-columns: (minmax(auto, 15.9375rem))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(auto, 15.9375rem));
   grid-auto-rows: 21.625rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 100%;
   gap: calc(4rem);
 }
 

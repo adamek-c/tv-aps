@@ -1,11 +1,10 @@
 .grid {
-	width: 100%;
-
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(auto, 15.9375rem));
+	grid-template-columns: repeat(auto-fill, minmax(auto, 15.9375rem));
 	grid-auto-rows: 21.625rem;
 	justify-content: center;
 
+	max-width: 100%;
 	gap: calc(#{$padding * 8});
 }
 
